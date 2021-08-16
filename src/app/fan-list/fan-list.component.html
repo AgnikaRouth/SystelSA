@@ -1,0 +1,27 @@
+<h2> Fan List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> id</th>
+            <th> Nom </th>
+            <th> Prenom </th>
+            <th> Ville </th>
+            <th> Pays </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let fan of fans" >
+            <td> {{ fan.id }} </td>
+            <td> {{ fan.nom }} </td>
+            <td> {{ fan.prenom }} </td>
+            <td> {{ fan.ville }} </td>
+            <td> {{ fan.pays }} </td>
+            
+            <td>
+                <button (click) = "updateFan(fan.id)" class = "btn btn-info"> Update </button> 
+                <button (click) = "deleteFan(fan.id)" class = "btn btn-danger" style="margin-left: 10px"> Supprimer </button>      
+
+            </td>
+        </tr>
+    </tbody>
+</table>

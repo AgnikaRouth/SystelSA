@@ -1,0 +1,97 @@
+
+<div style="height: 100vh;">
+    <mat-toolbar color="primary" class="mat-elevation-z8">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm="true">
+          <mat-icon>menu</mat-icon>
+        </button>
+
+        <a href="fanlist"  mat-button class="menu-button">
+            <span class="button-text"> Otaku Band </span>
+          </a>
+
+        <span class="example-spacer"></span>
+        <div fxShow="true" fxHide.lt-md="true" >
+          <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+
+          <a href="evenements" mat-button>
+            <mat-icon>date_range</mat-icon>
+            Evenements
+          </a>
+
+          <a href="fanlist" mat-button>
+            <mat-icon>group</mat-icon>
+            Fans 
+          </a>
+
+          <a href="addFan" mat-button>
+            <mat-icon>person_add</mat-icon>
+            Add Fan
+          </a>
+
+          <a href="artistes" mat-button>
+            <mat-icon>info</mat-icon>
+            Artistes
+          </a>
+  
+          
+          
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav>
+        <mat-nav-list>
+
+            <a href="evenements"  mat-button class="menu-button">
+                <mat-icon>date_range</mat-icon>
+                <span class="button-text">Evenements </span>
+            </a>
+
+          <a href="fanlist"  mat-button class="menu-button">
+            <mat-icon>group</mat-icon>
+            <span class="button-text">Fan List </span>
+          </a>
+  
+          <a href="addFan"  mat-button class="menu-button">
+            <mat-icon>person_add</mat-icon>
+            <span class="button-text">Add Fan </span>
+          </a>
+          
+          <a href="artistes" mat-button class="menu-button">
+            <mat-icon>people</mat-icon>
+            <span class="button-text">Artistes</span>
+          </a>
+  
+        
+          <a (click)="sidenav.toggle()" mat-list-item class="menu-button">
+            <mat-icon>close</mat-icon> 
+            <span class="button-text">Close</span>
+          </a>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <h1 class="text-center"> Otaku </h1>
+      <div class="container">
+      <router-outlet></router-outlet>
+      </div>
+      
+      
+      <mat-sidenav-content fxFlexFill>
+    <h1 class="text-center"> Otaku </h1>
+  <div class="container">
+  <router-outlet></router-outlet>
+  </div>
+  
+  <footer class = "footer">
+    <div class = "container">
+        <span>All Rights Reserved 2020 @AgnikaRouth</span>
+    </div>
+  </footer>
+
+</mat-sidenav-content>
+</mat-sidenav-container>
+  </div>
+  
+  

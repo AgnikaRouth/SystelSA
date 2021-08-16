@@ -1,0 +1,54 @@
+
+<div style="height: 100vh;">
+
+  <p>
+    Aucun nouvel événement n’est prévu.
+    Ceci est la page d’accueil
+  </p>
+
+
+    <mat-sidenav-container fxFlexFill>
+        <mat-sidenav #sidenav>
+          <mat-nav-list>
+            <a href="fanlist"  mat-button class="menu-button">
+              <mat-icon>group</mat-icon>
+              <span class="button-text">Fan List </span>
+            </a>
+    
+            <a href="addFan"  mat-button class="menu-button">
+              <mat-icon>person_add</mat-icon>
+              <span class="button-text">Add Fan </span>
+            </a>
+            
+            <a href="artistes" mat-button class="menu-button">
+              <mat-icon>people</mat-icon>
+              <span class="button-text">Artistes</span>
+            </a>
+
+            <p>
+             
+            </p>
+    
+          
+            <a (click)="sidenav.toggle()" mat-list-item class="menu-button">
+              <mat-icon>close</mat-icon> 
+              <span class="button-text">Close</span>
+            </a>
+          </mat-nav-list>
+        </mat-sidenav>
+  
+        <h1 class="text-center"> Otaku Band </h1>
+        <div class="container">
+          
+        <router-outlet></router-outlet>
+        </div>
+        
+
+        <mat-sidenav-content fxFlexFill>
+        
+          
+     
+        
+        </mat-sidenav-content>
+        </mat-sidenav-container>
+          </div>

@@ -1,0 +1,36 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Update Fan </h3>
+    <form (ngSubmit) = "onSubmit()" style="margin-bottom: 10px">
+    
+        <div class="form-group">
+            <label> Prenom </label>
+            <input type="text" class ="form-control" id = "Prenom"
+                [(ngModel)] = "fan.prenom" name = "Prenom">
+        </div>
+    
+    
+        <div class="form-group">
+            <label> Nom</label>
+            <input type="text" class ="form-control" id = "Nom"
+                [(ngModel)] = "fan.nom" name = "Nom">
+        </div>
+    
+    
+    
+        <div class="form-group">
+            <label> Ville</label>
+            <input type="text" class ="form-control" id = "Ville"
+                [(ngModel)] = "fan.ville" name = "Ville">
+        </div>
+    
+        <div class="form-group">
+            <label> Pays </label>
+            <input type="text" class ="form-control" id = "Pays"
+                [(ngModel)] = "fan.pays" name = "Pays">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Enregistrer</button>
+        
+    
+    </form>
+    </div> 
